@@ -29,11 +29,16 @@ guessButton.addEventListener('click', () => {
   }
   if(!remainingGuesses) {
     responseDisplay.textContent = "You Lose"
+    disableGame(guessButton)
   }
 })
 
 function resetGame(guessesRemain, computerGuess) {
   guessesRemain = 4;
   computerGuess = getRandomNumber();
+}
+
+function disableGame(button) {
+  button.disabled = true;
 }
 
