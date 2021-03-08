@@ -36,7 +36,7 @@ guessButton.addEventListener('click', () => {
 
 function resetGame() {
   remainingGuesses = 4;
-  computerGuess = getRandomNumber();
+  return computerGuess = getRandomNumber();
 }
 
 function disableGame(button: HTMLButtonElement) {
