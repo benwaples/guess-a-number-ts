@@ -26,26 +26,26 @@ guessButton.addEventListener('click', () => {
   }
   if(!comparedNumbers) {
     responseDisplay.textContent = `Boom!! You guessed correctly with ${remainingGuesses} remaining`
-    resetGame(remainingGuesses, computerGuess)
+    resetGame()
   }
   if(!remainingGuesses) {
-    responseDisplay.textContent = "You Lose"
+    responseDisplay.textContent = 'You Lose'
     disableGame(guessButton)
   }
 })
 
-function resetGame(guessesRemain, computerGuess) {
-  guessesRemain = 4;
+function resetGame() {
+  remainingGuesses = 4;
   computerGuess = getRandomNumber();
 }
 
-function disableGame(button) {
+function disableGame(button: HTMLButtonElement) {
   button.disabled = true;
   restartButton.style.display = 'block'
 }
 
 restartButton.addEventListener('click', () => {
-  resetGame(remainingGuesses, computerGuess)
+  resetGame()
 
 }) 
 
