@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 export {};
-import { compareNumbers } from '../utils'
+import { compareNumbers } from '../utils.js'
 const test = QUnit.test;
 
 test('compareNumbers() if guess is too high', (expect) => {

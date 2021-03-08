@@ -1,6 +1,6 @@
 export function compareNumbers(guess: number, correctNumber: number): number {
   if(guess > correctNumber) return 1;
-  if(guess < correctNumber) return 1;
+  if(guess < correctNumber) return -1;
   return 0;
 }
 
