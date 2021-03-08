@@ -1,7 +1,8 @@
 // import functions and grab DOM elements
 import { compareNumbers, getRandomNumber } from './utils.js'
-const guessButton = document.querySelector('button')
-
+const guessButton: HTMLButtonElement = document.querySelector('.submit')
+const restartButton: HTMLButtonElement = document.querySelector('.restart')
+restartButton.style.display = 'none'
 // initialize state
 let computerGuess = getRandomNumber()
 let remainingGuesses = 4
@@ -40,5 +41,13 @@ function resetGame(guessesRemain, computerGuess) {
 
 function disableGame(button) {
   button.disabled = true;
+  restartButton.style.display = 'block'
 }
+
+restartButton.addEventListener('click', () => {
+  resetGame(remainingGuesses, computerGuess)
+
+}) 
+
+
 
