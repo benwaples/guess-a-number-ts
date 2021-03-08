@@ -25,5 +25,15 @@ guessButton.addEventListener('click', () => {
   }
   if(!comparedNumbers) {
     responseDisplay.textContent = `Boom!! You guessed correctly with ${remainingGuesses} remaining`
+    resetGame(remainingGuesses, computerGuess)
+  }
+  if(!remainingGuesses) {
+    responseDisplay.textContent = "You Lose"
   }
 })
+
+function resetGame(guessesRemain, computerGuess) {
+  guessesRemain = 4;
+  computerGuess = getRandomNumber();
+}
+
